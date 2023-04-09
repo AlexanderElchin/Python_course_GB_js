@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+"use strict";
+// Задача 6: Вы пользуетесь общественным транспортом? Вероятно, вы расплачивались за проезд и получали билет с номером. Счастливым билетом называют такой билет с шестизначным номером,
+// где сумма первых трех цифр равна сумме последних трех. Т.е. билет с номером 385916 – счастливый, т.к. 3+8+5=9+1+6. 
+// Вам требуется написать программу, которая проверяет счастливость билета.
+// *Пример:*
+// 385916 -> yes
+// 123456 -> no  
+
+
+let b;
+do {  
+    b = prompt("Введите 6ти значеное число", 0); // цикл ввода диапозона 6ти значного числа
+}   while (b >= 1000000 || b <=99999 );
+let sum1 = (Math.floor(b/100000))+(Math.floor(b/10000)%10)+(Math.floor(b/1000)%10)
+let sum2 = (Math.floor(b/100)%10)+(Math.floor(b/10)%10)+(Math.floor(b%10))
+if ( sum1 == sum2)
+console.log('yes')
+else
+console.log('no')
+
+console.log(sum1);
+console.log(sum2);
+
+
+    </script>
+</body>
+</html>
